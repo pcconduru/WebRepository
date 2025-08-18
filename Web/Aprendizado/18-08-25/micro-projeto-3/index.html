@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTimeWatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <!--Watch in realtime text-->
+        <p id="time">HH:MM:SS</p>
+        <p id="city">Horário de Brasília</p>
+    </div>
+    <script>
+        function watch(){
+            const timeNow = new Date();
+            const second = timeNow.getSeconds().toString().padStart(2, '0');
+            const minute = timeNow.getMinutes().toString(). padStart(2, '0');
+            const hour = timeNow.getHours().toString().padStart(2, '0');
+            const time = `${hour}:${minute}:${second}`;
+
+            document.getElementById("time").innerText = time;
+        }
+        setInterval(watch, 1000);
+    </script>
+</body>
+</html>
