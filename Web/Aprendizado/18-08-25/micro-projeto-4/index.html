@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>toDo</title>
+    <title>TasksList</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
-        <h1 id="title">TASKS LIST</h1> 
+        <h1 id="title">Tasks List</h1> 
         <button id="Add">Add Task</button>
+        <input type="text" id="inputArea" placeholder="Write your task, here!"></textarea>
         <button id="Confirm">Confirm</button>
-        <textarea id="inputArea" placeholder="digite aqui!"></textarea>
         <ul id="lista"></ul>
     </div>
     <script>
-        document.getElementById("Add").addEventListener("click", function(){
-            
+        const addBtn = document.getElementById("Add");
+        const confirmBtn = document.getElementById("Confirm");
+        const inputArea = document.getElementById("inputArea");
+        const lista = document.getElementById("lista");
+
+        addBtn.addEventListener("click", () => {
+            inputArea.style.display = "block";
+            confirmBtn.style.display = "block";
+            addBtn.style.display = "none";
+        });
+        confirmBtn.addEventListener("click", () => {
+            inputArea.style.display = "none";
+            confirmBtn.style.display = "none";
+            addBtn.style.display = "inline";
         })
-        function addTask(){
-            document.getElementById("inputArea").show();
-            document.getElementById("Confirm").show();
-            let task = document.getElementById("inputArea").value;
-            
-            document.getElementById("Confirm").addEventListener("click", function(){
-                //let newTask = document.createElement("p");
-                document.getElementById("lista").innerHTML += `<p>${task}</p>`;
-            })
-        }
     </script>
 </body>
 </html>
