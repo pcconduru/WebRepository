@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <!--This print in the screen the value of count-->
+        <p id="textCount">Clicks: 0</p>
+        <!--This button add 1 to the counter-->
+        <button id="Add">Add +1</button>
+        <!--This button subtract 1 from the counter-->
+        <button id="Subtract">Subtract -1</button>
+    </div>
+    <!--This is in-line code script for JS in HTML-->
+    <script>
+        // Set a variable to the current count
+        let count = 0;
+        document.getElementById("Add").addEventListener("click", function(){
+            // Add the function to the button "ADD"
+            count ++;
+            document.getElementById("textCount").innerText = "Clicks: " + count
+        })
+        document.getElementById("Subtract").addEventListener("click", function(){
+            // Add the function to button "Subtract"
+            if(count > 0){
+                count --;
+                document.getElementById("textCount").innerText = "Clicks: " + count
+            }
+        })
+    </script>
+</body>
+</html>

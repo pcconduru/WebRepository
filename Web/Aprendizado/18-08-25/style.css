@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+div{
+    position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    text-align: center;
+}
+#textCount{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vh;
+    color: white;
+    margin-bottom: 10vh;
+}
+#Add{
+    border-radius: 10vh;
+    width: 15vh;
+    height: 7vh;
+    border: solid 2px ;
+    color: lightgreen;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#Subtract{
+    border-radius: 10vh;
+    width: 15vh;
+    height: 7vh;
+    border: solid 2px;
+    color: red;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
