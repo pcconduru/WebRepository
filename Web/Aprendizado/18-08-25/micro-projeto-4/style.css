@@ -114,3 +114,7 @@ div{
     list-style-type: none;
     padding-left: 0;
 }
+
+.checkbox{
+    border: solid 2px black;
+}

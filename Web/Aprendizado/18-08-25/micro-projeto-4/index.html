@@ -43,14 +43,19 @@
             if (task !== "") {
                 const li = document.createElement("li");
                 const check = document.createElement("input");
-                
-                li.textContent = task;
-                lista.appendChild(li);
-                inputArea.value = "";
 
                 check.type = "checkbox";
                 check.id = `id_${count}`;
-                li.appendChild(check);
+
+                const label = document.createElement("label");
+                label.htmlFor = check.id;
+                label.textContent = task;
+
+                li.appendChild(check)
+                li.appendChild(label)
+
+                lista.appendChild(li);
+                inputArea.value = "";
             }
         })
     </script>
