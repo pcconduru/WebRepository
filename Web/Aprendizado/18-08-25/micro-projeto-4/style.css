@@ -9,12 +9,34 @@
     }
 }
 
+#inputArea.show {
+    display: block;
+    animation: slideFade 0.4s ease forwards;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#inputArea.hide {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 div{
-    position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%, -120%);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5vh;
+    width: 100%;
+    max-width: 600px;
 }
 
 #title{
@@ -23,12 +45,10 @@ div{
     font-weight: bold;
     font-style: normal;
     font-size: 9vh;
-
 }
 
 #Add{
-    display: inline;
-    transform: translate(0%, -100%);
+    margin-top: -6vh;
     border-radius: 32px;
     background-color: #217DE6;
     width: 15vh;
@@ -47,10 +67,11 @@ div{
     display: none;
     border: solid 2px black;
     background-color: #F0F0F0;
-    border-radius: 38px;
+    border-radius: 30px;
     width: 50vh;
     height: 16vh;
-    padding: 1vh;
+    padding-left: 2vh;
+    padding-top: 2vh;
     resize: none;
     font-family: "Inter", sans-serif;
     font-size: 2vh;
@@ -69,10 +90,6 @@ div{
 }
 
 #Confirm{
-    position: absolute;
-       top: 105%;
-       left: 50%;
-       transform: translate(-50%, -50%);
     display: none;
     border-radius: 32px;
     background-color: #217DE6;
@@ -85,4 +102,15 @@ div{
     font-weight: bold;
     font-style: normal;
     font-size: 2vh;
+}
+
+#lista{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3vh;
+
+    list-style-type: none;
+    padding-left: 0;
 }

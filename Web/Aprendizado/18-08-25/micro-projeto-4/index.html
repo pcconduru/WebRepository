@@ -14,7 +14,7 @@
     <div>
         <h1 id="title">Tasks List</h1> 
         <button id="Add">Add Task</button>
-        <input type="text" id="inputArea" placeholder="Write your task, here!"></textarea>
+        <textarea id="inputArea" placeholder="Write your task, here!"></textarea>
         <button id="Confirm">Confirm</button>
         <ul id="lista"></ul>
     </div>
@@ -24,7 +24,11 @@
         const inputArea = document.getElementById("inputArea");
         const lista = document.getElementById("lista");
 
+        let count = 0;
+
         addBtn.addEventListener("click", () => {
+            inputArea.classList.add("show");
+            confirmBtn.classList.add("show");
             inputArea.style.display = "block";
             confirmBtn.style.display = "block";
             addBtn.style.display = "none";
@@ -33,6 +37,21 @@
             inputArea.style.display = "none";
             confirmBtn.style.display = "none";
             addBtn.style.display = "inline";
+            count ++;
+
+            const task = inputArea.value.trim();
+            if (task !== "") {
+                const li = document.createElement("li");
+                const check = document.createElement("input");
+                
+                li.textContent = task;
+                lista.appendChild(li);
+                inputArea.value = "";
+
+                check.type = "checkbox";
+                check.id = `id_${count}`;
+                li.appendChild(check);
+            }
         })
     </script>
 </body>
