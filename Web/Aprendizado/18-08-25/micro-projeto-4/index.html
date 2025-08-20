@@ -46,10 +46,12 @@
 
                 check.type = "checkbox";
                 check.id = `id_${count}`;
+                check.classList.add("task-check");
 
                 const label = document.createElement("label");
-                label.htmlFor = check.id;
+                label.setAttribute("for", `id_${count}`);
                 label.textContent = task;
+                label.classList.add("task-label");
 
                 li.appendChild(check)
                 li.appendChild(label)
